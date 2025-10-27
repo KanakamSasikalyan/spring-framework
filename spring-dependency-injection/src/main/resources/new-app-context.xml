@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+    <!-- bean definitions here -->
+    <bean id="Atom" class="io.di.spring.Atom">
+        <property name="atomicNumber" value="1"/>
+        <property name="atomicMass" value="1.008"/>
+        <property name="atomicRadius" value="53"/>
+        <property name="density" value="0.08988"/>
+    </bean>
+
+    <bean id="Element" class="io.di.spring.Element">
+        <property name="name" value="Hydrogen"/>
+        <property name="valency" value="1"/>
+        <property name="energyLevels" value="1"/>
+    </bean>
+</beans>
