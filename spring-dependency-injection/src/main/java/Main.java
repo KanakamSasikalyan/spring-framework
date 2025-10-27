@@ -1,5 +1,6 @@
 import io.di.spring.Atom;
 import io.di.spring.Element;
+import io.di.spring.JavaConfig;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionReader;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -53,9 +55,15 @@ public class Main {
 
         //Referencing Beans
 
-        ApplicationContext appContext = new ClassPathXmlApplicationContext("new-app-context.xml");
-        Element element = (Element) appContext.getBean("Element");
-        System.out.println("Element Bean Created -- "+ element);
+//        ApplicationContext appContext = new ClassPathXmlApplicationContext("new-app-context.xml");
+//        Element element = (Element) appContext.getBean("Element");
+//        System.out.println("Element Bean Created -- "+ element);
 
+
+        //Bean -- Java Config
+
+        ApplicationContext appContext = new AnnotationConfigApplicationContext(JavaConfig.class);
+        Element element = (Element) appContext.getBean("elementBean");
+        System.out.println("Element Bean Created -- "+ element);
     }
 }
