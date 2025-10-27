@@ -60,10 +60,16 @@ public class Main {
 //        System.out.println("Element Bean Created -- "+ element);
 
 
-        //Bean -- Java Config
+//        Bean -- Java Config
 
         ApplicationContext appContext = new AnnotationConfigApplicationContext(JavaConfig.class);
         Element element = (Element) appContext.getBean("elementBean");
         System.out.println("Element Bean Created -- "+ element);
+
+
+        //XML Based Autowiring
+//        ApplicationContext appContext = new ClassPathXmlApplicationContext("new-app-context.xml");
+//        Element element = (Element) appContext.getBean("element");
+//        System.out.println("Element Bean Created -- "+ element);
     }
 }

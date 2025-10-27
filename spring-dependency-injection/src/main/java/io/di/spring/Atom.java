@@ -7,6 +7,7 @@ public class Atom {
     private double density;
 
     public Atom() {
+        System.out.println("Atom -- Default Constructor Invoked...");
     }
 
     public Atom(int atomicNumber, double atomicMass, int atomicRadius, double density) {
@@ -14,6 +15,7 @@ public class Atom {
         this.atomicMass = atomicMass;
         this.atomicRadius = atomicRadius;
         this.density = density;
+        System.out.println("Atom -- Parameterized Constructor Invoked...");
     }
 
     public int getAtomicNumber() {
