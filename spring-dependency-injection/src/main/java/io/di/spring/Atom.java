@@ -6,6 +6,15 @@ public class Atom {
     private int atomicRadius;
     private double density;
 
+    public Atom() {
+    }
+
+    public Atom(int atomicNumber, double atomicMass, int atomicRadius, double density) {
+        this.atomicNumber = atomicNumber;
+        this.atomicMass = atomicMass;
+        this.atomicRadius = atomicRadius;
+        this.density = density;
+    }
 
     public int getAtomicNumber() {
         return atomicNumber;

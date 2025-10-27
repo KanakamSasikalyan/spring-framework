@@ -51,5 +51,11 @@ public class Main {
 
          */
 
+        //Referencing Beans
+
+        ApplicationContext appContext = new ClassPathXmlApplicationContext("new-app-context.xml");
+        Element element = (Element) appContext.getBean("Element");
+        System.out.println("Element Bean Created -- "+ element);
+
     }
 }
